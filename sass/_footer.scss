@@ -1,0 +1,28 @@
+@use "var" as var;
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 100vh;
+  padding-bottom: 20px;
+  @include var.mq {
+    display: block;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    @include var.mq {
+      margin-bottom: 10px;
+    }
+    li {
+      font-size: 0.75rem;
+      & + li {
+        margin-left: 30px;
+      }
+    }
+  }
+  p {
+    font-size: 0.625em;
+  }
+}

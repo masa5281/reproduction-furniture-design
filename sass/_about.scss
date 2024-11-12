@@ -1,0 +1,12 @@
+main {
+  .about-content {
+    max-width: 600px;
+    font-size: 0.875rem;
+    line-height: 2;
+    p {
+      &:first-child {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

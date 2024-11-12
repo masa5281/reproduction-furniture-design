@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+@use "var" as var;
+
+@use "common";
+@use "header";
+@use "top";
+@use "products";
+@use "item";
+@use "about";
+@use "company";
+@use "footer";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html {
+  height: 100vh;
+  font-size: 100%;
+}
+body {
+  height: 100vh;
+  position: relative;
+  color: var.$colorText;
+}
+a {
+  color: var.$colorText;
+  text-decoration: none;
+  &:hover {
+    opacity: .7;
+  }
+}
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+}

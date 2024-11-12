@@ -1,0 +1,8 @@
+$colorText: #333;
+$bp: 900px;
+
+@mixin mq {
+  @media screen and (max-width: ($bp)) {
+    @content;
+  }
+}

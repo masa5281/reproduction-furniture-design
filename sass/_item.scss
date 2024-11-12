@@ -1,0 +1,52 @@
+@use "var" as var;
+
+main {
+  .item-content {
+    display: flex;
+    max-width: 800px;
+    @include var.mq {
+      display: block;
+    }
+    .item-img {
+      width: 50%;
+      height: auto;
+      @include var.mq {
+        width: 100%;
+        margin-bottom: 35px;
+      }
+      img {
+        width: 100%;
+        display: none;
+      }
+    }
+    .item-txt {
+      width: 50%;
+      padding-left: 60px;
+      font-size: 0.875rem;
+      text-align: justify;  //テキストを両端揃える。
+      line-height: 1.5;
+      @include var.mq {
+        width: 100%;
+        padding-left: 0;
+      }
+      p {
+        &:nth-child(1) {
+          margin-bottom: 30px;
+        }
+        &:nth-child(2) {
+          margin-bottom: 30px;
+        }
+      }
+      dl {
+        display: flex;
+        flex-wrap: wrap;
+        dt {
+          width: 30%;
+        }
+        dd {
+          width: 70%;
+        }
+      }
+    }
+  }
+}

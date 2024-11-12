@@ -1,0 +1,19 @@
+@use "var" as var;
+
+#pagination {
+  margin-top: 45px;
+  text-align: center;
+  list-style: none;
+  li {
+    display: inline;
+    & + li {
+      margin-left: 30px;
+    }
+  }
+  a {
+    color: var.$colorText;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: all .5s;
+  }
+}
